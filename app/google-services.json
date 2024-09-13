@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "797854053422",
+    "project_id": "mazilalpari-e5827",
+    "storage_bucket": "mazilalpari-e5827.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797854053422:android:b911bcf9cbc515a9025bbf",
+        "android_client_info": {
+          "package_name": "com.example.mazilalpari"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRvLkfHdVspO3qJqB2c7Fd9zfNpdx0XL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

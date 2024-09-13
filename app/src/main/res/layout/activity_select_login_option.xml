@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SelectLoginOptionActivity"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/adlam_display"
+        android:gravity="center_horizontal"
+        android:text="Who Are You ?"
+        android:textColor="@color/navyblue"
+        android:textSize="40dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_LoginOption_Driver"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        app:cardCornerRadius="40dp"
+        >
+
+        <LinearLayout
+            android:layout_width="315dp"
+            android:layout_height="171dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="168dp"
+                android:layout_height="118dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/busdriverlogo" />
+
+            <TextView
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adlam_display"
+                android:gravity="center_horizontal"
+                android:text="Driver"
+                android:textColor="@color/navyblue"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_LoginOption_Passanger"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="40dp">
+
+        <LinearLayout
+            android:layout_width="315dp"
+            android:layout_height="171dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="168dp"
+                android:layout_height="118dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/buspassangerlogo" />
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adlam_display"
+                android:gravity="center_horizontal"
+                android:text="Passanger"
+                android:textColor="@color/navyblue"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_LoginOption_Admin"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="40dp">
+
+        <LinearLayout
+            android:layout_width="315dp"
+            android:layout_height="171dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="168dp"
+                android:layout_height="118dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/busadminlogo" />
+
+            <TextView
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adlam_display"
+                android:gravity="center_horizontal"
+                android:text="Admin"
+                android:textColor="@color/navyblue"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
