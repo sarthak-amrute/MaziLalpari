@@ -63,10 +63,9 @@ public class UserRegistrationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (etName.getText().toString().isEmpty()) {
                     etName.setError("Name must be Required");
-                }
-                else if (etMobileNo.getText().toString().isEmpty()) {
+                } else if (etMobileNo.getText().toString().isEmpty()) {
                     etMobileNo.setError("Number must be Required");
-                } else if (etMobileNo.getText().toString().length()!=10) {
+                } else if (etMobileNo.getText().toString().length() != 10) {
                     etMobileNo.setError("Number must be 10 Digits");
                 } else if (etEmailId.getText().toString().isEmpty()) {
                     etEmailId.setError("Email must Required");
@@ -76,57 +75,46 @@ public class UserRegistrationActivity extends AppCompatActivity {
                     etEmailId.setError("Please Enter Lower case letter");
                 } else if (!etEmailId.getText().toString().contains("@gmail.com")) {
                     etEmailId.setError("Please Enter Valid EmailId");
-                }
-                else if (etUsername.getText().toString().isEmpty()) {
+                } else if (etUsername.getText().toString().isEmpty()) {
                     etUsername.setError("Username cannot be empty");
                 } else if (etUsername.length() < 6) {
                     etUsername.setError("Username must be at least 6 characters long");
-                } else if (!etUsername.getText().toString().matches(".*\\d.*"))
-                {
+                } else if (!etUsername.getText().toString().matches(".*\\d.*")) {
                     etUsername.setError("username must contain at least one number");
-                }
-                else if(etUsername.getText().toString().contains(" ")) {
+                } else if (etUsername.getText().toString().contains(" ")) {
                     etUsername.setError("Spacing is Invalid in username");
-                }
-                else if (etPassword.getText().toString().isEmpty()) {
+                } else if (etPassword.getText().toString().isEmpty()) {
                     etPassword.setError("Password cannot be empty");
-                }
-                else if (etPassword.getText().toString().length() < 8) {
+                } else if (etPassword.getText().toString().length() < 8) {
                     etPassword.setError("Password must be at least 8 characters long");
-                }
-                else if (!etPassword.getText().toString().matches(".*[A-Z].*")) {
+                } else if (!etPassword.getText().toString().matches(".*[A-Z].*")) {
                     etPassword.setError("Password must contain at least one uppercase letter");
-                }
-                else if (!etPassword.getText().toString().matches(".*[a-z].*")) {
+                } else if (!etPassword.getText().toString().matches(".*[a-z].*")) {
                     etPassword.setError("Password must contain at least one lowercase letter");
-                }
-                else if (!etPassword.getText().toString().matches(".*\\d.*")) {
+                } else if (!etPassword.getText().toString().matches(".*\\d.*")) {
                     etPassword.setError("Password must contain at least one number");
-                }
-                else if (!etPassword.getText().toString().matches(".*[@#\\$%^&+=].*")) {
+                } else if (!etPassword.getText().toString().matches(".*[@#\\$%^&+=].*")) {
                     etPassword.setError("Password must contain at least one special character (@#$%^&+=)");
-                }
-                else {
-
-                    progressDialog=new ProgressDialog(UserRegistrationActivity.this);
+                } else {
+                     progressDialog=new ProgressDialog(UserRegistrationActivity.this);
                     progressDialog.setTitle("Please Wait...");
                     progressDialog.setMessage("Registration in Progress");
                     progressDialog.setCanceledOnTouchOutside(true);
                     progressDialog.show();
 
-                    PhoneAuthProvider.getInstance().verifyPhoneNumber(91+etMobileNo.getText().toString(),60, TimeUnit.SECONDS,UserRegistrationActivity.this,
+                    PhoneAuthProvider.getInstance().verifyPhoneNumber("+91"+etMobileNo.getText().toString(),60, TimeUnit.SECONDS,UserRegistrationActivity.this,
                             new  PhoneAuthProvider.OnVerificationStateChangedCallbacks()
                             {
 
                                 @Override
                                 public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-//                                    progressDialog.dismiss();
+                                   progressDialog.dismiss();
                                     Toast.makeText(UserRegistrationActivity.this, "Verificaton Successfull", Toast.LENGTH_SHORT).show();
                                 }
 
                                 @Override
                                 public void onVerificationFailed(@NonNull FirebaseException e) {
-//                                    progressDialog.dismiss();
+                                    progressDialog.dismiss();
 
                                     if (e instanceof FirebaseAuthInvalidCredentialsException) {
                                         // Invalid request
@@ -149,59 +137,15 @@ public class UserRegistrationActivity extends AppCompatActivity {
                                     intent.putExtra("username",etUsername.getText().toString());
                                     intent.putExtra("password",etPassword.getText().toString());
                                     startActivity(intent);
-                                }
-                            }
-                    );
-                  //  userregister();
+                }
+            });
         };
     }});
-    }
 
-//    private void userregister() {
-//
-//        AsyncHttpClient client=new AsyncHttpClient();
-//        RequestParams params=new RequestParams();
-//
-//        params.put("name",etName.getText().toString());
-//        params.put("mobileno",etMobileNo.getText().toString());
-//        params.put("emailid",etEmailId.getText().toString());
-//        params.put("username",etUsername.getText().toString());
-//        params.put("password",etPassword.getText().toString());
-//
-//        client.post("http://192.168.13.78:80/MaziLalpariAPI/userregistration.php",params,
-//                new JsonHttpResponseHandler()
-//                {
-//                    @Override
-//                    public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-//                        super.onSuccess(statusCode, headers, response);
-//                        try {
-//                            String status = response.getString("success");
-//                            if (status.equals("1"))
-//                            {
-//                                progressDialog.dismiss();
-//                                Toast.makeText(UserRegistrationActivity.this, "Registration Successfully Done ", Toast.LENGTH_SHORT).show();
-//                                Intent i=new Intent(UserRegistrationActivity.this,UserLoginActivity.class);
-//                                startActivity(i);
-//
-//                            }
-//                            else {
-//                                progressDialog.dismiss();
-//                                Toast.makeText(UserRegistrationActivity.this, "Data is Already Exist", Toast.LENGTH_SHORT).show();
-//
-//                            }
-//                        } catch (JSONException e) {
-//                            throw new RuntimeException(e);
-//
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-//                        super.onFailure(statusCode, headers, throwable, errorResponse);
-//                        progressDialog.dismiss();
-//                        Toast.makeText(UserRegistrationActivity.this,"Server Error",Toast.LENGTH_SHORT).show();
-//
-//                    }
-//                });
-//    }
+    }
 }
+
+
+
+
+

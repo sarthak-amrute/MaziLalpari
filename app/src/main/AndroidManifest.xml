@@ -16,7 +16,7 @@
         android:theme="@style/Theme.MaziLalpari"
         tools:targetApi="31">
         <activity
-            android:name=".OTPVerificationActivity"
+            android:name=".OTP_VerificationActivity"
             android:exported="false" />
         <activity
             android:name=".AdminRegistrationActivity"
