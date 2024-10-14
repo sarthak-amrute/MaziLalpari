@@ -14,14 +14,20 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     UserHomeFragment userhomeFragment=new  UserHomeFragment();
     UserNearbyFragment usernearbyfragment=new UserNearbyFragment();
     UserHelpFragment userhelpfragment = new UserHelpFragment();
-    UserMusicFragment usermusicfragment = new UserMusicFragment();
     UserMyProfileFragment usermyprofileFragment = new UserMyProfileFragment();
+    BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+
+        bottomNavigationView=findViewById(R.id.home_Bottom_Nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setSelectedItemId(R.id.menuBottomNavHome);
     }
+
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -32,9 +38,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         else if (item.getItemId()==R.id.menuBottomNavNearby) {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.home_Frame_Layout,usernearbyfragment).commit();
-        }
-        else if (item.getItemId()==R.id.menuBottomNavMusic) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.home_Frame_Layout,usermusicfragment).commit();
         }
         else if(item.getItemId()==R.id.menuBottomNavMyProfile){
             getSupportFragmentManager().beginTransaction().replace(R.id.home_Frame_Layout,usermyprofileFragment).commit();
