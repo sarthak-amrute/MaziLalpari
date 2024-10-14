@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> f2c4831 (satyam commit one activity created Location Activity)
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,6 +11,7 @@
     android:layout_height="match_parent"
     tools:context=".LocationActivity">
 
+<<<<<<< HEAD
     <ImageView
         android:id="@+id/iv_DriverLogin_Logo"
         android:layout_width="461dp"
@@ -14,3 +19,6 @@
         android:src="@drawable/signupwithgoogle" />
 
 </LinearLayout>
+=======
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> f2c4831 (satyam commit one activity created Location Activity)
