@@ -16,11 +16,17 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     UserHelpFragment userhelpfragment = new UserHelpFragment();
     UserMusicFragment usermusicfragment = new UserMusicFragment();
     UserMyProfileFragment usermyprofileFragment = new UserMyProfileFragment();
+
+    BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+
+        bottomNavigationView=findViewById(R.id.home_Bottom_Nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setSelectedItemId(R.id.menuBottomNavHome);
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
