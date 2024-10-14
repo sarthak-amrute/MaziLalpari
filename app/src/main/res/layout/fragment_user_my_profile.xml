@@ -1,48 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UserMyProfileFragment">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        tools:context=".MyProfileActivity"
         android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_MyProfile_Name"
-        android:layout_marginTop="20sp"
-        android:text="Name"
-        android:textAlignment="center"
-        android:textColor="@color/lightblue"
-        android:textSize="24dp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_MyProfile_Email"
-        android:layout_marginTop="20sp"
-        android:text="Email"
-        android:textAlignment="center"
-        android:textColor="@color/lightblue"
-        android:textSize="24dp"
-        android:textStyle="bold" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_MyProfile_Signout"
-        android:layout_width="287dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="15dp"
-        android:background="@drawable/loginbtnshape"
-        android:fontFamily="@font/aldrich"
-        android:text="SIGNOUT"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/iv_Profile_Dp"
+            android:layout_width="match_parent"
+            android:layout_height="201dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/accounticon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_Profile_Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_verify"
+            android:layout_margin="20dp"
+            android:text="Change Profile Photo"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alata"/>
+
+        <TextView
+            android:id="@+id/tv_Profile_Name"
+            android:layout_width="374dp"
+            android:layout_height="43dp"
+            android:layout_margin="15dp"
+            android:drawableLeft="@drawable/baseline_account_circle_24"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="374dp"
+            android:layout_height="43dp"
+            android:layout_margin="15dp"
+            android:id="@+id/tv_Profile_Mobile"
+            android:drawableLeft="@drawable/baseline_local_phone_24"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Mobile No."
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_Profile_Email"
+            android:layout_width="374dp"
+            android:layout_height="43dp"
+            android:layout_margin="15dp"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="374dp"
+            android:layout_height="43dp"
+            android:layout_margin="15dp"
+            android:id="@+id/tv_Profile_UserName"
+            android:drawableLeft="@drawable/usernameicon"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Username"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="374dp"
+            android:layout_height="43dp"
+            android:layout_margin="15dp"
+            android:id="@+id/tv_Profile_Password"
+            android:drawableLeft="@drawable/passwordicon"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="338dp"
+            android:layout_height="43dp"
+            android:layout_margin="15dp"
+            android:id="@+id/tv_profile_token"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Token"
+            android:textColor="@color/black"
+            android:paddingStart="20dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ProfileFragment_SignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_retry"
+            android:layout_margin="20dp"
+            android:text="Sign Out"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alata"/>
+
     </LinearLayout>
-</FrameLayout>
-
+</ScrollView>
 
