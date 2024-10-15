@@ -14,7 +14,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     UserHomeFragment userhomeFragment=new  UserHomeFragment();
     UserNearbyFragment usernearbyfragment=new UserNearbyFragment();
     UserHelpFragment userhelpfragment = new UserHelpFragment();
-    UserMusicFragment usermusicfragment = new UserMusicFragment();
+    UserEmergancyFragment usermusicfragment = new UserEmergancyFragment();
     UserMyProfileFragment usermyprofileFragment = new UserMyProfileFragment();
 
     BottomNavigationView bottomNavigationView;
