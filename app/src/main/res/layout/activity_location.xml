@@ -11,6 +11,6 @@
         android:id="@+id/iv_DriverLogin_Logo"
         android:layout_width="461dp"
         android:layout_height="262dp"
-        android:src="@drawable/buslogo" />
+        android:src="@drawable/signupwithgoogle" />
 
 </LinearLayout>
