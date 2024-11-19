@@ -11,8 +11,8 @@
 
     <ImageView
         android:layout_width="71dp"
-        android:layout_height="65dp"
-        android:layout_margin="10dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/mahamandallogo" />
 
     <androidx.cardview.widget.CardView
@@ -25,23 +25,84 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="From"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 android:textStyle="bold" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et_SearchMyBus_source"
                 android:inputType="text"
+                android:hint="Enter Source"
+                android:textColorHint="@color/lightblue"
                 android:textColor="@color/black"
+                android:fontFamily=""
                 android:drawableLeft="@drawable/locationicon"
+
                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="To"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_SearchMyBus_Destination"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:drawableLeft="@drawable/locationicon"
+                android:hint="Enter Destination"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/lightblue" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_SearchMyBus_Date"
+                android:inputType="text"
+                android:hint="Enter Date"
+                android:textColorHint="@color/lightblue"
+                android:textColor="@color/black"
+                android:fontFamily=""
+                android:drawableLeft="@drawable/calendaricon"
+                android:drawablePadding="5dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_SearchMyBus_Search"
+                android:layout_width="287dp"
+                android:layout_height="36dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/searchbutton"
+                android:fontFamily="@font/autour_one"
+                android:text="Search "
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
 
