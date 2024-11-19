@@ -17,8 +17,7 @@ public class NetworkDetails {
             {
                 for(int i = 0; i<networkInfo.length;i++)
                 {
-                    if(networkInfo[i].getState() == NetworkInfo.State.CONNECTED)
-                    {
+                    if(networkInfo[i].getState() == NetworkInfo.State.CONNECTED) {
                         return true;
                     }
                 }
