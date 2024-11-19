@@ -20,12 +20,13 @@
         android:layout_height="262dp"
         android:src="@drawable/buslogo" />
 
-
     <ImageView
-        android:id="@+id/iv_DriverLogin_Logo2"
+        android:id="@+id/iv_DriverLogin_Logo4"
         android:layout_width="461dp"
         android:layout_height="262dp"
         android:src="@drawable/buslogo" />
+
+
 
 
 
